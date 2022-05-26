@@ -55,7 +55,7 @@ function App() {
       <Router>
         <_Navbar title="TodosList" />
         <Switch>
-          <Route exact path="/home" render={() => {
+          <Route exact path="/todoList" render={() => {
             return (
               <>
                 <AddToDo addTodo={addTodo} />
