@@ -7,8 +7,8 @@ import { Footer } from './Footer';
 import { About } from './About';
 
 import {
-  BrowserRouter as Router,
-  Switch,
+  HashRouter,
+  Routes,
   Route,
 } from 'react-router-dom';
 
@@ -52,9 +52,9 @@ function App() {
   }, [todos])
   return (
     <>
-      <Router>
+      <HashRouter>
         <_Navbar title="TodosList" />
-        <Switch>
+        <Routes>
           <Route exact path="/" render={() => {
             return (
               <>
@@ -68,11 +68,11 @@ function App() {
           <Route exact path='/about'>
             <About/>
           </Route>
-        </Switch>
+        </Routes>
 
 
         <Footer />
-      </Router>
+      </HashRouter>
     </>
   );
 }
